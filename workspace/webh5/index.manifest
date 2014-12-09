@@ -1,0 +1,15 @@
+CACHE MANIFEST
+#version 3
+./index.html
+./css/ratchet.css
+./css/ratchet.min.css
+./images/slide-1.jpg
+./images/slide-2.jpg
+./images/slide-3.jpg
+./images/slide-4.jpg
+./js/ratchet.js
+./js/ratchet.min.js
+
+
+NETWORK:
+*

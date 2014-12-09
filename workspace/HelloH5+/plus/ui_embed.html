@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="MobileOptimized" content="320"/>
+		<title>Hello H5+</title>
+		<script type="text/javascript" src="../js/common.js"></script>
+		<script type="text/javascript" charset="utf-8">
+var embed=null,auto=false;
+// 扩展API加载完毕，现在可以正常调用扩展API 
+function plusReady(){
+	embed=plus.ui.createWindow("",{top:"46px",bottom:"0px"});
+	plus.ui.getSelfWindow().append( embed );
+	embed.addEventListener("loaded",onBrowserLoading,false);
+	if(auto){
+		openUrl();
+	}
+}
+// 判断扩展API是否准备，否则监听"plusready"事件
+if(window.plus){
+	plusReady();
+}else{
+	document.addEventListener("plusready",plusReady,false);
+}
+// 打开网址
+function openUrl(){
+	var url=document.getElementById("url");
+	embed.load(url.value);
+	url.blur();
+}
+// 页面加载后自动打开
+document.addEventListener("DOMContentLoaded",function(){
+	if(embed){
+		openUrl();
+	}else{
+		auto=true;
+	}
+},false);
+// 页面跳转完成事件
+function onBrowserLoading(){
+	document.getElementById("url").value=embed.getUrl();
+}
+		</script>
+		<link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8"/>
+	</head>
+	<body>
+		<header>
+			<div class="nvbt" onclick="back();"><div class="iback"></div></div>
+			<div class="nvtt">
+				<form action="?" method="get" onsubmit="openUrl();return false;">
+				<input id="url" style="width:98%;-webkit-user-select:auto;" type="url" value="http://www.dcloud.io/"></input>
+				</form>
+			</div>
+			<div class="nvbt" onclick="openUrl();">Go</div>
+		</header>
+	</body>
+</html>

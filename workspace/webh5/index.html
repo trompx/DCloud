@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!-- <html manifest="./index.manifest"> -->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>wap网站首页</title>
+		
+		<!-- Sets initial viewport load and disables zooming  -->
+	    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
+	
+	    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	
+	    <!-- Include the compiled Ratchet CSS -->
+	    <link href="libs/css/ratchet.css" rel="stylesheet">
+	
+	    <!-- Include the compiled Ratchet JS -->
+	    <script src="libs/js/ratchet.js"></script>
+
+	    <link rel="stylesheet" href="css/demo.css">
+	</head>
+	<body>
+		
+		<!--底部导航-->
+		<nav class="bar bar-tab">
+		    <a class="tab-item active" href="index.html">
+		        <span class="icon icon-home">
+		        </span>
+		        <span class="tab-label">
+		            Home
+		        </span>
+		    </a>
+		    <a class="tab-item" href="list.html">
+		        <span class="icon icon-person">
+		        </span>
+		        <span class="tab-label">
+		            Profile
+		        </span>
+		    </a>
+		    <a class="tab-item" href="#">
+		        <span class="icon icon-star-filled">
+		        </span>
+		        <span class="tab-label">
+		            Favorites
+		        </span>
+		    </a>
+		    <a class="tab-item" href="#">
+		        <span class="icon icon-search">
+		        </span>
+		        <span class="tab-label">
+		            Search
+		        </span>
+		    </a>
+		    <a class="tab-item" href="#">
+		        <span class="icon icon-gear">
+		        </span>
+		        <span class="tab-label">
+		            Settings
+		        </span>
+		    </a>
+		</nav>
+		
+		<div id="container">
+			<!--轮播图-->
+			<div class="slider" id="mySlider">
+			    <div class="slide-group">
+			        <div class="slide">
+			            <img src="images/slide-1.jpg">
+			        </div>
+			        <div class="slide">
+			            <img src="images/slide-2.jpg">
+			        </div>
+			        <div class="slide">
+			            <img src="images/slide-3.jpg">
+			        </div>
+			        <div class="slide">
+			            <img src="images/slide-4.jpg">
+			        </div>
+			    </div>
+			</div>
+			
+			<!-- 列表 -->
+			<ul class="table-view">
+			    <li class="table-view-cell media">
+			        <a class="navigate-right">
+			            <img class="media-object pull-left" src="http://placehold.it/84x84">
+			            <div class="media-body">
+			                2014夏装新款美特斯邦威女国药前胸花环情侣短袖T恤
+			                <p>
+			                    ￥99.00
+			                </p>
+			            </div>
+			        </a>
+			    </li>
+			    <li class="table-view-cell media">
+			        <a class="navigate-right">
+			            <img class="media-object pull-left" src="http://placehold.it/84x84">
+			            <div class="media-body">
+			                2014夏装新款美特斯邦威女两件套连衣裙
+			                <p>
+			                    ￥99.00
+			                </p>
+			            </div>
+			        </a>
+			    </li>
+			    <li class="table-view-cell media">
+			        <a class="navigate-right">
+			            <img class="media-object pull-left" src="http://placehold.it/84x84">
+			            <div class="media-body">
+			                美特斯邦威女背带宽松牛仔半身裙2014夏装新款
+			                <p>
+			                    ￥99.00
+			                </p>
+			            </div>
+			        </a>
+			    </li>
+			</ul>
+		</div>
+		
+		<script src="" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" charset="utf-8">
+			var c = document.getElementById("container");
+			c.style.height = document.body.clientHeight - 51 + "px";
+			c.style.bottom =  "51px";
+
+			// Only needed if you want to fire a callback
+			document
+			.querySelector('#mySlider')
+			.addEventListener('slide', myFunction);
+
+			function myFunction() {
+
+			}
+		</script>
+		<script> 
+
+			// var headerSnippet = localStorage.getItem('header'); 
+			// if(headerSnippet){ 
+			// 	document.querySelector('#header').innerHTML = headerSnippet; 
+			// }else{ 
+			// 	localStorage.setItem("header", headerSnippet);
+			// } 
+
+
+			// var img = document.querySelector('#img-placeholder'); 
+			// img.src = localStorage.getItem('banner'); // data:base64;image/png,qee41e4i6b... 
+
+			// var css = "background-image: url(" + localStorage.getItem('background') + ");"; 
+
+			// var link.href = localStorage.getItem('special-css'); 
+		</script>
+	</body>
+</html>

@@ -1,0 +1,12 @@
+#container {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: auto;
+}
+.slider {
+  width: 100%;
+}
+.slider img {
+  width: 100%;
+}
